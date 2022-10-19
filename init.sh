@@ -11,3 +11,4 @@ sudo apt-get update \
 && cd ~ \
 && mkdir -p Workspace \
 && clone https://github.com/congnguyen243/setup-linux.git
+&& sudo apt install apt-transport-https ca-certificates curl software-properties-common

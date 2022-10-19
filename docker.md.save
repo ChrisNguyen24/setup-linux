@@ -1,0 +1,32 @@
+sudo apt update
+
+# apt use packages over HTTPS
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
+
+# add the GPG key 
+# for 20.4
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+#curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
+# Add the Docker repository to APT 
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
+
+# Make sure you are about to install from the Docker repo 
+apt-cache policy docker-ce
+
+# install Docker
+sudo apt install docker-ce
+
+# docker status
+sudo systemctl status docker
+
+# add your username to the docker group
+sudo usermod -aG docker ${USER}
+
+# To apply the new group membership, log out of the server and back in, or type the following
+su - ${USER}
+
+# Confirm that your user is now added 
+group
+
+
