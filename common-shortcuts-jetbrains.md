@@ -29,4 +29,6 @@ ctrl K
 ctrl shift K
 ctrl shift backspace
 ctrl shift up down
+f11 
+shift f11
 
