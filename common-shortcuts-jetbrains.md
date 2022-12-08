@@ -31,4 +31,5 @@ ctrl shift backspace
 ctrl shift up down
 f11 
 shift f11
-
+ctrl shift I
+ctrl E
